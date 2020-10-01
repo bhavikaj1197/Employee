@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="250" viewBox="0 0 250 250">
+  <defs>
+    <clipPath id="clip-Sync">
+      <rect width="250" height="250"/>
+    </clipPath>
+  </defs>
+  <g id="Sync" clip-path="url(#clip-Sync)">
+    <rect width="250" height="250" fill="#fff"/>
+    <g id="mobile-sync" transform="translate(-16.221 0)">
+      <path id="Path_11387" data-name="Path 11387" d="M63.471,125c0-37.646,26.984-68.5,62.5-75.8V62.5l46.875-31.25L125.972,0V16.957C73.064,24.577,32.221,70.022,32.221,125a109.093,109.093,0,0,0,38.16,82.837L97.741,189.6A78.087,78.087,0,0,1,63.471,125Z" transform="translate(0 0)" fill="#fff"/>
+      <path id="Path_11388" data-name="Path 11388" d="M295.8,86.951l-27.361,18.242a78.087,78.087,0,0,1,34.271,64.595c0,37.693-26.93,68.966-62.5,76.258V232.287l-46.875,31.25,46.875,31.25V277.893c52.914-7.623,93.751-53.123,93.751-108.106A109.089,109.089,0,0,0,295.8,86.951Z" transform="translate(-82.985 -44.787)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

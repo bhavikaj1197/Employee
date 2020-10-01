@@ -1,0 +1,101 @@
+<div class="toolbar header" role="banner">
+    <h3 style="margin-left: 40px;">Employee Details</h3>
+    <div class="spacer"></div>
+</div><br>
+<div class="row col-sm-12 container"> 
+
+<button *ngIf="formShow" class="btn btn-primary " style="border-color: #007bff;margin-left: 89%;" (click)="backToEmpPage()">Back</button><br>&nbsp;&nbsp;
+<button *ngIf="!formShow" class="btn btn-primary " style="border-color: #007bff;margin-left: 89%;" (click)="addEmp()" >Add Employee</button>
+</div>
+<div>
+    
+    <div class="col-sm-12" *ngIf="!formShow">
+        <div class="card-body" style="margin: 0 15%;">
+            <table class="table table-hover" style="border: 1px solid#ababab">
+                <thead>
+                    <tr>
+                        <th class="text-center">Sr. No</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">DOB</th>
+                        <th class="text-center">Address</th>
+                        <th class="text-center">Role</th>
+                        <th class="text-center">Salary</th>
+                        <th class="text-center">Experience</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        *ngFor="let row of dict | slice: (page-1) * pageSize1 : (page-1) * pageSize1 + pageSize1 let i=index">
+                        <td class="text-center " data-toggle="modal" data-target="#exampleModal" (click)="rowClicked(row)">
+                            {{pageSize1*(page - 1)+ i+1}}</td>
+                        <td class="text-center " data-toggle="modal" data-target="#exampleModal" (click)="rowClicked(row)">{{row.name}}</td>
+                        <td class="text-center " data-toggle="modal" data-target="#exampleModal" (click)="rowClicked(row)">{{row.dob}}</td>
+                        <td class="text-center " data-toggle="modal" data-target="#exampleModal" (click)="rowClicked(row)">{{row.address}}</td>
+                        <td class="text-center " data-toggle="modal" data-target="#exampleModal" (click)="rowClicked(row)">{{row.role}}</td>
+                        <td class="text-center " data-toggle="modal" data-target="#exampleModal" (click)="rowClicked(row)">{{row.salary}}</td>
+                        <td class="text-center " data-toggle="modal" data-target="#exampleModal" (click)="rowClicked(row)">{{row.experience}}</td>
+                    </tr>
+                </tbody>
+                <tbody [hidden]="dict.length !=0">
+                    <tr>
+                        <td colspan="10" class="text-center">No Records Found</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <div class="container col-sm-4" *ngIf="formShow" style="border: 1px solid #ccc3c3;"><br>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" autocomplete="off" >
+            <h3>Add Employee Details:</h3>
+            <label>Employee Name:</label>
+            <input type="text" formControlName="name" required class="form-control" placeholder="Enter Name here"> <br>
+            <label>Employee Date Of Birth:</label>
+            <label style="margin-left: 25%;">Employee Salary:</label><br>
+            <input type="date" formControlName="date" style="width: 45%;" >
+            <input type="number" formControlName="salary" style="width: 51%;margin-left: 4%;" placeholder="Enter Salary here"> <br><br>
+            <label>Employee Address:</label>
+            <input type="text" formControlName="address" class="form-control" placeholder="Enter Address here"> <br>
+            <label>Employee Role:</label>
+            <input type="text" formControlName="role" class="form-control" placeholder="Enter Role here"> <br>
+            <label>Employee Experience:</label>
+            <input type="text" formControlName="experience" class="form-control" placeholder="Enter Experience here"> <br>
+            <button  class="btn btn-primary " style="border-color: #007bff;margin-bottom: 4%;" [disabled]="!form.valid " >Submit</button><br>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #a0c4ff">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Detail</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
+            class="fa fa-close" style="color: black; font-size: 26px;"></i></button>
+        </div>
+        <div class="modal-body">
+          <div >
+            <span class="text-truncate pl-2">Employee Name: {{name}}</span>
+           <br>
+           <span class="text-truncate pl-2">Employee Date of Birth: {{dob}}</span>
+           <br>
+           <span class="text-truncate pl-2">Employee Address: {{address}}</span>
+           <br>
+           <span class="text-truncate pl-2">Employee Role: {{role}}</span>
+           <br>
+           <span class="text-truncate pl-2">Employee Salary: {{salary}}</span>
+           <br>
+           <span class="text-truncate pl-2">Employee Experience: {{experience}}</span>
+           <br>
+  
+           </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="250" viewBox="0 0 250 250">
+  <defs>
+    <clipPath id="clip-Add">
+      <rect width="250" height="250"/>
+    </clipPath>
+  </defs>
+  <g id="Add" clip-path="url(#clip-Add)">
+    <rect width="250" height="250" fill="#fff"/>
+    <g id="Group_17337" data-name="Group 17337" transform="translate(124.621 -52) rotate(45)">
+      <path id="Exclusion_1" data-name="Exclusion 1" d="M125,250A125,125,0,0,1,36.611,36.612,125,125,0,1,1,213.387,213.388,124.181,124.181,0,0,1,125,250Zm-.013-108.5,0,0,33.791,33.813,16.483-16.49-33.8-33.811,33.8-33.826L158.789,74.7l-33.8,33.826-33.8-33.818L74.715,91.2l33.8,33.818L74.721,158.826,91.2,175.308,124.982,141.5Z" transform="translate(0.11 -0.11)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

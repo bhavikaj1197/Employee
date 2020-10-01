@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Login Page */
+/* @import "~@ng-select/ng-select/themes/default.theme.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css"; */
+
+body{
+  overflow-y: auto !important;
+}
+
+#newbody { 
+  font-family: 'Open Sans', sans-serif;
+  /* background: url('assets/backgroundImages/loginbackground.svg') fixed center center; */
+  overflow: hidden !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* /Login Page */
+
+* { 
+  font-size: 12px;
+}
+
+.table>tbody>tr>td,  .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  font-size: 12px;
+}
+
+
+.table>thead>tr>th {
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #D6E5FC;
+
+}
+
+.table>tbody>tr>td {
+ cursor: pointer;
+
+}
+
+
+
+.table-curved {
+  border-collapse: separate;
+}
+.table-curved {
+  border: solid #ccc 1px;
+  border-radius: 8px;
+  border-left:0px;
+}
+.table-curved td, .table-curved th {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.table-curved th {
+  border-top: none;
+}
+.table-curved th:first-child {
+  border-radius: 6px 0 0 0;
+}
+.table-curved th:last-child {
+  border-radius: 0 6px 0 0;
+}
+.table-curved th:only-child{
+  border-radius: 6px 6px 0 0;
+}
+.table-curved tr:last-child td:first-child {
+  border-radius: 0 0 0 6px;
+}
+.table-curved tr:last-child td:last-child {
+  border-radius: 0 0 6px 0;
+}

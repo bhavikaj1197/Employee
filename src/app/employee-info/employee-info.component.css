@@ -1,0 +1,28 @@
+.header{
+    background-color: #004974;
+    border: 1px solid #4c4848;
+    padding-bottom: 10px;
+    font-size: large;
+    text-align: inherit;
+    color: white;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #808890;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.label{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    
+}

@@ -1,0 +1,43 @@
+
+<div class="container-fluid" *ngIf="employee">
+  <div class="login-box" [ngStyle]="{backgroundImage:'url(../../assets/backgroundImages/im.jpg)'}"><p>Sign Up</p>
+      <br>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+          <section class="user-details">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <input type="text" class="form-control col-lg-12" placeholder="Enter Username or Email"
+                          formControlName="username">
+                  </div>
+
+                  <div class="col-lg-12 mg-30">
+                      <input type="text" formControlName="password" class="form-control" placeholder="Enter Password"
+                          [type]="passwordIcon ?'text': 'password'">
+                      <i class="fas fa-eye" [hidden]="!passwordIcon" (click)="togglePasswordVisibility()"
+                          style="color: black;"></i>
+                      <i class="fas fa-eye-slash" [hidden]="passwordIcon" (click)="togglePasswordVisibility()"
+                          style="color: black;"></i>
+                  </div>
+                 
+                  <div class="col-lg-12 mg-30">
+                      <button type="submit" class="btn btn-primary text-center w-100"
+                          [disabled]="!this.loginForm.valid">Login</button>
+                          <!-- <button type="submit" class="btn btn-primary text-center w-100"
+                         >Login</button> -->
+                  </div>
+              </div>
+          </section>
+        </form>
+  </div>
+</div>
+
+
+
+
+
+   
+
+
+
+
+<router-outlet></router-outlet>
